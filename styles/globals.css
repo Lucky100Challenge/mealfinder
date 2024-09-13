@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-background text-gray-800 font-sans;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Add a subtle texture to the background */
+.bg-texture {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+@media print {
+  /* Hide elements not needed in print */
+  nav, button {
+    display: none !important;
+  }
+
+  /* Ensure the meal plan is visible */
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Adjust colors for better print quality */
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Ensure all content is visible */
+  .h-40 {
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
