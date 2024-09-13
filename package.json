@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.9",
+    "autoprefixer": "^10.4.20",
     "axios": "^1.4.0",
     "next": "latest",
     "react": "latest",
